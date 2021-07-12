@@ -3,33 +3,11 @@ layout: body
 js: index.js
 eleventyNavigation:
   key: Home
-extraNav:
-  -
-    key: CustomNavFunction
-    url: '#'
-    title: Custom Nav Function
-    clickFunc: $store.navFunctions.customFunction()
-  -
-    key: HelpModal
-    url: '#'
-    title: Help
-    clickFunc: $store.modals.toggleModal('help')
-  -
-    key: FAQModal
-    url: '#'
-    title: FAQ
-    clickFunc: $store.modals.toggleModal('faq')
 ---
-{# Modals #}
-<div x-data>
-    {% set modalID = "faq" %}
-    {% include "partials/modal.njk" %}
-    {% set modalID = "help" %}
-    {% include "partials/modal.njk" %}
-</div>
 
-<div x-data="componentData" class="text-center m-20">
-    <span x-text="message"></span>
-    {% set tooltipText = "This is a tooltip" %}
-    {% include "partials/tooltip.njk" %}
+<div class="">
+    {% include "partials/hero-motion-image-right.njk" %}
+    {% include "partials/text.njk" %}
+    {% include "partials/hero.njk" %}
+    {% include "partials/hero-motion-image-left.njk" %}
 </div>

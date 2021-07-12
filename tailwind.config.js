@@ -8,13 +8,15 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                myPurple: '#7C3AED',
-                myBlue: '#1E40AF',
-                myDarkBlue: '#1E3A8A',
+                myPink: '#ecd8d2',
+                myMint: '#c4cec6',
+                myBrown: '#c4ac9e',
+                myBlack: '#101119',
+                myGrey: '#353a47',
             },
             fontFamily: {
-                handwritten: ['Zeyada', 'cursive'],
-                typewriter: ['Newsreader', 'serif'],
+                default: ['Heebo', 'sans-serif'],
+                header: ['Giaza', 'serif'],
             },
         },
     },
