@@ -25,30 +25,21 @@ h1 {
     @apply text-4xl tracking-tight font-header text-myGrey sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl;
 }
 
-.bg-mint {
-    background-color: #d1e3dd;
-}
-
 :focus {
     outline: none !important;
 }
 
-.slideDownWrapper {
-    transition: height 0.3s ease-out;
-    height: 0;
-    overflow: hidden;
-}
-
 .btn {
-    @apply px-4 py-2 rounded-md text-sm font-medium bg-myPink text-white inline-flex transition;
+    @apply px-4 py-2 rounded-md text-sm font-medium bg-myPink text-white inline-flex transition duration-300;
 }
 
-.btn:hover {
-    @apply filter brightness-95 shadow;
+.btn:hover,
+.btn.alt-btn:hover {
+    @apply shadow-md;
 }
 
 .btn.alt-btn {
-    @apply bg-white text-myPink shadow;
+    @apply bg-white text-myPink shadow-sm;
 }
 
 .btn.hero-btn {

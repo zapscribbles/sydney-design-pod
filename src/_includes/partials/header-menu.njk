@@ -6,7 +6,7 @@
 {%- for entry in navPages %}
     <a
         href="{{ entry.url | url }}"
-        class="btn {% if entry.url == page.url %} active {% endif %}"
+        class="text-myGrey px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:shadow {% if entry.url == page.url %} active {% endif %}"
         {% if entry.clickFunc %} @click="{{ entry.clickFunc }}" {% endif %}
     >
         {{ entry.title }}

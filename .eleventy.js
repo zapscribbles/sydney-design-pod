@@ -14,9 +14,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './css/style.css' });
     eleventyConfig.addPassthroughCopy('src/common-js/*.js');
     eleventyConfig.addPassthroughCopy('src/**/*.js');
-    eleventyConfig.addPassthroughCopy('assets/*.png');
-    eleventyConfig.addPassthroughCopy('assets/*.jpg');
-    eleventyConfig.addPassthroughCopy('assets/*.ico');
+    eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy({ 'src/_data/*.json': 'data' });
 
     // This adds a variable that can be used in the template. In this case, we use build time to identify the current version of the site
@@ -40,6 +38,7 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: 'src',
+            layouts: '_includes/layouts',
             output: '_site',
         },
     };

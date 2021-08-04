@@ -4,8 +4,8 @@
   "description": "My Eleventy boilerplate project, w/ Alpine, Tailwind and Browserify",
   "main": "index.js",
   "scripts": {
-    "start-dev": "pkill -f eleventy; browserify entry.js -o src/common-js/bundle.js & rimraf ./_site & ELEVENTY_PRODUCTION=false eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
-    "build-prod": "browserify entry.js -o src/common-js/bundle.js & rimraf ./_site & ELEVENTY_PRODUCTION=true eleventy & postcss src/styles/tailwind.css --o _site/css/style.css"
+    "start": "pkill -f eleventy; browserify entry.js -o src/common-js/bundle.js & rimraf ./_site & ELEVENTY_PRODUCTION=false eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
+    "build": "browserify entry.js -o src/common-js/bundle.js & rimraf ./_site & ELEVENTY_PRODUCTION=true eleventy & postcss src/styles/tailwind.css --o _site/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss-cli": "^8.3.0",
-    "tailwindcss": "^2.1.4"
+    "tailwindcss": "^2.2.4"
   }
 }

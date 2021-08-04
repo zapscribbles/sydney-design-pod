@@ -7,6 +7,17 @@ eleventyNavigation:
 
 <div class="">
     {% include "partials/hero-motion-image-right.njk" %}
+
+    {% set textTitle = "Lorem ipsum dolor" %}
+    {% set textTitleHighlight = "sit amet" %}
+    {% set textBody = [] %}
+    {% set textBody = (textBody.push("Anim aute id magna aliqua ad ad non deserunt sunt."), textBody) %}
+    {% set textBody = (textBody.push("Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."), textBody) %}
+    {% set textButtonURL = "#" %}
+    {% set textButtonLabel = "Contact Me" %}
+    {% set textButtonAltURL = "#" %}
+    {% set textButtonAltLabel = "Another Button" %}
     {% include "partials/text.njk" %}
+
     {% include "partials/hero-motion-image-left.njk" %}
 </div>
