@@ -1,0 +1,26 @@
+---
+layout: body
+js: index.js
+eleventyNavigation:
+    key: About
+    order: 1
+---
+
+<div class="lg:mx-10">
+
+    {% set textTitle = "Meet" %}
+    {% set textTitleHighlight = "Jill" %}
+    {% set textBody = [] %}
+    {% set textBody = (textBody.push("Hi, I’m Jill Clements and I’m an interior designer and decorator with more than 25 years of experience. I've worked with clients all over NSW in many different spaces, from residential homes, AIRBNB’s, hotels, retirement villages, many many display homes and apartments for developers, kitchens, bathrooms, new builds, old character homes and water front luxury homes and at all times to create both beautiful spaces that can be enjoyed for many years. I’m passionate about my job and love what I do. I consider it a real privilege to be invited into your home or commercial space and work with you to make it the best it can possibly be."), textBody) %}
+    {% set textBody = (textBody.push("Together we’ll work out what your dream space means to you and how that fits in with your lifestyle and budget. I work hard on removing the stress and making this an enjoyable and worthwhile process for my clients. Ultimately creating the dream and doing it once, doing it right."), textBody) %}
+    {% set textBody = (textBody.push("My own style is fairly eclectic, I do love touches of luxury whilst bringing in pieces that have history and meaning. My clients have enjoy many styles, including contemporary, classic, Hamptons, coastal and mid century, all of which I have expertise in."), textBody) %}
+    {% set textBody = (textBody.push("Whether it’s one room, a whole house, a new build or a commercial space I’m pretty sure I’ll be able to help from furniture and Homewares to finishes and fixtures."), textBody) %}
+    {% set textButtonURL = "booking-form" %}
+    {% set textButtonLabel = "Book a Consultation" %}
+    {% set textButtonAltURL = null %}
+    {% set textButtonAltLabel = null %}
+    {% include "partials/text.njk" %}
+
+    <img class="m-auto max-w-lg" src="/assets/profile.jpg"/>
+
+</div>

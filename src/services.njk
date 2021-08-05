@@ -2,15 +2,56 @@
 layout: body
 eleventyNavigation:
     key: Services
+    order: 2
 ---
-<h1 class="text-center mt-10 text-myPink">Services</h1>
-{% set textTitle = "Interior" %}
-{% set textTitleHighlight = "Styling" %}
+{% set textTitle = "Services" %}
+{% set textTitleHighlight = "we offer" %}
 {% set textBody = [] %}
-{% set textBody = (textBody.push("Lauren provides a full menu of interior styling and decorating services to create beautiful and functional spaces"), textBody) %}
-{% set textBody = (textBody.push("Furniture and decor sourcing Artwork selection Room layouts Colour consultations Trade discount program Onsite styling Shopping trips"), textBody) %}
-{% set textButtonURL = "#" %}
-{% set textButtonLabel = "Hire Me" %}
-{% set textButtonAltURL = "#" %}
-{% set textButtonAltLabel = "Another Button" %}
+{% set textBody = (textBody.push("At Sydney Design Pod, we offer a range of services to suit your needs. If you are looking for something not listed below, do get in touch with us and we will let you know if we are able to help."), textBody) %}
+{% set textButtonURL = "booking-form" %}
+{% set textButtonLabel = "Book a Consultation" %}
 {% include "partials/text.njk" %}
+
+{% set motionTitle = "Interior" %}
+{% set motionTitleHighlight = "styling" %}
+{% set motionBody = "Jill provides a full menu of interior styling and decorating services to create beautiful and functional spaces" %}
+{% set motionList = [] %}
+{% set motionList = (motionList.push("Furniture and decor sourcing"), motionList) %}
+{% set motionList = (motionList.push("Artwork selection"), motionList) %}
+{% set motionList = (motionList.push("Room layouts"), motionList) %}
+{% set motionList = (motionList.push("Colour consultations"), motionList) %}
+{% set motionList = (motionList.push("Trade discount program"), motionList) %}
+{% set motionList = (motionList.push("Onsite styling"), motionList) %}
+{% set motionList = (motionList.push("Shopping trips"), motionList) %}
+{% set motionButtonURL = "booking-form" %}
+{% set motionButtonLabel = "Hire Me" %}
+{% set motionImage = "/assets/dining1.jpg" %}
+{% include "partials/hero-motion-image-right.njk" %}
+
+{% set motionTitle = "Renovation and" %}
+{% set motionTitleHighlight = "building" %}
+{% set motionBody = "From a kitchen or bathroom update, to a complete new build, Jill can help with your large-scale project" %}
+{% set motionList = [] %}
+{% set motionList = (motionList.push("Concept development"), motionList) %}
+{% set motionList = (motionList.push("Interior and exterior finishes selections "), motionList) %}
+{% set motionList = (motionList.push("Site and supplier visits "), motionList) %}
+{% set motionList = (motionList.push("Supplier, product and trade management"), motionList) %}
+{% set motionButtonURL = "booking-form" %}
+{% set motionButtonLabel = "Let's Do It" %}
+{% set motionImage = "/assets/living1.jpg" %}
+{% include "partials/hero-motion-image-left.njk" %}
+
+{% set motionTitle = "Commercial" %}
+{% set motionTitleHighlight = "projects" %}
+{% set motionBody = "Including display homes and apartments, NO project is too small. Let’s get together to discuss your needs" %}
+{% set motionList = [] %}
+{% set motionList = (motionList.push("Hotels"), motionList) %}
+{% set motionList = (motionList.push("Display houses and apartments"), motionList) %}
+{% set motionList = (motionList.push("Retirement villages"), motionList) %}
+{% set motionList = (motionList.push("Bars"), motionList) %}
+{% set motionList = (motionList.push("Lobbies"), motionList) %}
+{% set motionList = (motionList.push("Office Updates"), motionList) %}
+{% set motionButtonURL = "booking-form" %}
+{% set motionButtonLabel = "Book a consultation" %}
+{% set motionImage = "/assets/bedroom1.jpg" %}
+{% include "partials/hero-motion-image-right.njk" %}

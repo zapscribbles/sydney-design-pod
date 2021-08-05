@@ -9,7 +9,9 @@
         {% endfor %}
         <div class="mt-10 flex justify-center">
             <a href="{{ textButtonURL }}" class="btn hero-btn mint mr-4">{{ textButtonLabel }}</a>
-            <a href="{{ textButtonAltURL }}" class="btn hero-btn mint alt-btn">{{ textButtonAltLabel }}</a>
+            {% if textButtonAltURL != null %}
+                <a href="{{ textButtonAltURL }}" class="btn hero-btn mint alt-btn">{{ textButtonAltLabel }}</a>
+            {% endif %}
         </div>
     </div>
 </div>

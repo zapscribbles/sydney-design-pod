@@ -2,6 +2,28 @@
 layout: body
 eleventyNavigation:
     key: Portfolio
+    order: 4
+photos:
+    - living1.jpg
+    - dining1.jpg
+    - living3.jpg
+    - living4.jpg
+    - bedroom1.jpg
+    - bedroom2.jpg
 ---
 
-Photos will go here
+{% set textTitle = "Our" %}
+{% set textTitleHighlight = "portfolio" %}
+{% set textBody = [] %}
+{% set textBody = (textBody.push("Here is a selection of photos from our previous work. If you are looking to see examples of something specific get in touch and let us know."), textBody) %}
+{% set textButtonURL = "/booking-form" %}
+{% set textButtonLabel = "Let's do this" %}
+{% set textButtonAltURL = "/about" %}
+{% set textButtonAltLabel = "More about us" %}
+{% include "partials/text.njk" %}
+
+<div class='mx-20 m-auto flex flex-wrap'>
+    {% for photo in photos %}
+        <img class='max-h-96 border-8 border-transparent object-cover rounded-3xl {% if loop.index % 4 == 0 or (loop.index-1) % 4 == 0 %} w-3/5 {% else %} w-2/5 {% endif %}' src="/assets/{{ photo }}"/>
+    {% endfor %}
+</div>
