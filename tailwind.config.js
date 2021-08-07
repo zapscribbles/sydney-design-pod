@@ -8,9 +8,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                myPink: '#ecd8d2',
-                myMint: '#c4cec6',
-                myBrown: '#c4ac9e',
+                myPink: '#FFE8D6',
+                myAsh: '#B7B7A4',
+                myRust: '#DDBEA9',
                 myBlack: '#101119',
                 myGrey: '#353a47',
             },

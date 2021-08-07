@@ -3,13 +3,22 @@ layout: body
 eleventyNavigation:
     key: Portfolio
     order: 4
-photos:
-    - living1.jpg
-    - dining1.jpg
-    - living3.jpg
-    - living4.jpg
-    - bedroom1.jpg
-    - bedroom2.jpg
+projects:
+    -   title: Project 1
+        desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst.
+        photos:
+            - living1.jpg
+            - dining1.jpg
+            - living3.jpg
+            - bedroom1.jpg
+    -   title: Project 2
+        desc: eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec.
+        photos:
+            - living3.jpg
+            - living4.jpg
+            - bedroom1.jpg
+            - bedroom2.jpg
+            - living4.jpg
 ---
 
 {% set textTitle = "Our" %}
@@ -22,8 +31,26 @@ photos:
 {% set textButtonAltLabel = "More about us" %}
 {% include "partials/text.njk" %}
 
-<div class='mx-20 m-auto flex flex-wrap'>
-    {% for photo in photos %}
-        <img class='max-h-96 border-8 border-transparent object-cover rounded-3xl {% if loop.index % 4 == 0 or (loop.index-1) % 4 == 0 %} w-3/5 {% else %} w-2/5 {% endif %}' src="/assets/{{ photo }}"/>
+<div class="max-w-7xl m-auto">
+    {% for project in projects %}
+        <div class="my-20">
+            <h1 class="text-center">{{ project.title }}</h1>
+            <p class="mt-3 mb-10 max-w-md mx-auto text-lg text-myGrey sm:text-xl md:mt-5 md:max-w-3xl">{{ project.desc }}</p>
+            <div class='mx-20 m-auto flex flex-wrap'>
+                {% for photo in project.photos %}
+                    {% if loop.length % 2 != 0 and loop.last %}
+                        {# If there is an odd number of photos, treat the last one differently #}
+                        {% set width = "w-3/5 m-auto" %}
+                    {% elif loop.index % 4 == 0 or (loop.index - 1) % 4 == 0 %}
+                        {# If this is a 4th or 4th-1, make it wide #}
+                        {% set width = "w-3/5" %}
+                    {% else %}
+                        {# If this is a 2nd or 3rd, make it narrow #}
+                        {% set width = "w-2/5" %}
+                    {% endif %}
+                    <img class='max-h-96 border-8 border-transparent object-cover rounded-3xl {{ width }}' src="/assets/{{ photo }}"></img>
+                {% endfor %}
+            </div>
+        </div>
     {% endfor %}
 </div>

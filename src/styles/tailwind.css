@@ -47,19 +47,19 @@ h1 {
 }
 
 .btn.brown {
-    @apply bg-myBrown;
+    @apply bg-myRust;
 }
 
 .btn.alt-btn.brown {
-    @apply bg-white text-myBrown;
+    @apply bg-white text-myRust;
 }
 
 .btn.mint {
-    @apply bg-myMint;
+    @apply bg-myAsh;
 }
 
 .btn.alt-btn.mint {
-    @apply bg-white text-myMint;
+    @apply bg-white text-myAsh;
 }
 
 /* Tooltip text */
