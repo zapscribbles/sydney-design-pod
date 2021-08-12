@@ -43,7 +43,7 @@ h1 {
 }
 
 .btn.hero-btn {
-    @apply px-8 py-4 text-lg;
+    @apply px-4 py-3 lg:px-8 lg:py-4 text-lg;
 }
 
 .btn.brown {

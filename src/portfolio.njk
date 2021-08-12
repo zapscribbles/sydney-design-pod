@@ -35,8 +35,8 @@ projects:
     {% for project in projects %}
         <div class="my-20">
             <h1 class="text-center">{{ project.title }}</h1>
-            <p class="mt-3 mb-10 max-w-md mx-auto text-lg text-myGrey sm:text-xl md:mt-5 md:max-w-3xl">{{ project.desc }}</p>
-            <div class='mx-20 m-auto flex flex-wrap'>
+            <p class="mt-3 mb-10 max-w-md mx-auto text-center lg:text-lg text-myGrey sm:text-xl md:mt-5 md:max-w-3xl">{{ project.desc }}</p>
+            <div class='lg:mx-20 m-auto flex flex-wrap'>
                 {% for photo in project.photos %}
                     {% if loop.length % 2 != 0 and loop.last %}
                         {# If there is an odd number of photos, treat the last one differently #}

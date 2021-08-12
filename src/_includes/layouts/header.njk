@@ -3,25 +3,26 @@ layout: main
 ---
 
 <header class="">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
-            <div class="flex justify-end items-center">
+    <nav class="px-4 sm:px-6 lg:px-8" aria-label="Top">
+        <div x-data="{ menuOpen: false }" class="w-full pt-6 lg:pb-4 lg:flex items-center justify-between">
+            <div class="flex justify-between lg:justify-center items-center">
                 <a href="/">
                     <span class="sr-only">Sydney Design Pod</span>
                     <span class="font-header text-3xl">Sydney Design Pod</span>
                 </a>
-            </div>
-            <div class="flex items-center">
-                <div class="hidden ml-10 space-x-8 lg:block">
-                    {% include "partials/header-menu.njk"%}
+                <div
+                class='lg:hidden mr-3 text-2xl flex justify-center items-center text-center transition transform origin-center'
+                :class="menuOpen ? 'rotate-180' : ''"
+                @click="menuOpen = !menuOpen; menuOpen ? $refs.slideDownWrapper.style.height = $refs.slideDown.scrollHeight+'px' : $refs.slideDownWrapper.style.height = '0px'">
+                    <i class="fal fa-caret-circle-down"></i>
                 </div>
-                <div class="ml-10 space-x-4">
+            </div>
+            <div :class="menuOpen ? 'mt-4' : ''" class="lg:mr-4 transition-all overflow-hidden h-0 lg:overflow-auto lg:h-auto" x-ref="slideDownWrapper">
+                <div class='flex flex-col lg:flex-row justify-center items-center gap-4 lg:my-2' x-ref="slideDown">
+                    {% include "partials/header-menu.njk"%}
                     <a href="#" class="btn">Contact Us</a>
                 </div>
             </div>
-        </div>
-        <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-            {% include "partials/header-menu.njk"%}
         </div>
     </nav>
 </header>
