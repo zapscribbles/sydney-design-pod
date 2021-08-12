@@ -1,6 +1,6 @@
-<div x-data="{ shown: false }" x-intersect="shown = true" class="flex flex-col lg:flex-row lg:my-20 lg:w-5/6 m-auto items-center gap-5 lg:gap-0">
-    <div :class="shown ? 'opacity-100 transform -translate-x-4 translate-y-12 lg:translate-x-4 lg:-translate-y-0' : ''" class="w-full h-full ml-4 object-cover opacity-0 transition-all duration-1000">
-        <img class="rounded-2xl w-full max-h-64 lg:max-h-96 object-cover" src="{{ motionImage }}" alt="">
+<div x-data="{ shown: false }" x-intersect="shown = true" class="flex flex-col lg:flex-row lg:my-20 lg:w-5/6 m-auto items-center gap-5 lg:gap-0 lg:justify-center">
+    <div :class="shown ? 'opacity-100 transform -translate-x-4 translate-y-12 lg:translate-x-4 lg:-translate-y-0' : ''" class="{% if not portrait %} w-full {% endif %} h-full ml-4 object-cover opacity-0 transition-all duration-1000">
+        <img class="rounded-2xl w-full max-h-96 {% if portrait %} w-96 lg:m-auto {% endif %} object-cover" src="{{ motionImage }}" alt="">
     </div>
     <div :class="shown ? 'opacity-100 translate-x-2 lg:-translate-x-8' : ''" class="bg-myRust bg-opacity-80 rounded-3xl transform z-10 opacity-0 transition-all duration-1000 text-center lg:text-left">
         <div class="m-10">
