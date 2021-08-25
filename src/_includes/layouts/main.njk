@@ -4,6 +4,12 @@ js:
 fontAwesomeKitID: 2229cc8bf4
 googleFontsURL: https://fonts.googleapis.com/css2?family=Heebo:wght@200;500;800&display=swap
 wip: true
+extraNav:
+  -
+    key: CopyLocalStorage
+    url: '#'
+    title: Copy All Changes
+    clickFunc: navigator.clipboard.writeText(JSON.stringify(localStorage));
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +29,7 @@ wip: true
         <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="/common-js/bundle.js?v={% version %}"></script>
+        <script defer src="/common-js/contentEditor.js" buildVersion="{% version %}"></script>
         <script src="/usefulFuncs.js"></script>
 
         {% if js %}
@@ -36,7 +43,7 @@ wip: true
     </head>
     <body class="bg-gray-50">
         {% if wip %}
-            <div class="overflow-hidden absolute transform -rotate-45 bg-gray-300 text-gray-600 top-9 z-0 left-12 text-sm w-56 -translate-x-1/2 p-x text-center origin-center">Work in Progress</div>
+            <div class="overflow-hidden absolute transform -rotate-45 bg-gray-300 text-gray-600 top-3 left-6 text-sm w-56 -translate-x-1/2 p-x text-center origin-center" style="z-index: -10;">WIP</div>
         {% endif %}
 
         {% block content %}

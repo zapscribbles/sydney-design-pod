@@ -5,10 +5,11 @@
     <div :class="shown ? 'opacity-100 translate-x-2 lg:-translate-x-8' : ''" class="bg-myRust bg-opacity-80 rounded-3xl transform z-10 opacity-0 transition-all duration-1000 text-center lg:text-left">
         <div class="m-10">
             <h1>
-                <span class="block xl:inline">{{ motionTitle }}</span>
-                <span class="block xl:inline">{{ motionTitleHighlight }}</span>
+                <span class="block xl:inline" contenteditable="true">{{ motionTitle }}
+                    {{ motionTitleHighlight }}</span>
+                {# <span class="block xl:inline">{{ motionTitleHighlight }}</span> #}
             </h1>
-            <div class="mt-3 max-w-md mx-auto text-lg text-myGrey sm:text-xl md:mt-5 md:max-w-3xl">
+            <div class="mt-3 max-w-md mx-auto text-lg text-myGrey sm:text-xl md:mt-5 md:max-w-3xl" contenteditable>
                 {{ motionBody }}
                 {% if motionList %}
                     <ul class='mt-2 ml-10 text-left'>
